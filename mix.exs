@@ -26,8 +26,6 @@ defmodule Unsplashx.MixProject do
       {:tesla, "~> 1.4"},
       {:castore, "~> 0.1.0"},
       {:mint, "~> 1.0"},
-      {:gun, "~> 1.3"},
-      {:idna, "~> 6.0"},
       # optional, required by JSON middleware
       {:jason, ">= 1.2.0"}
     ]
