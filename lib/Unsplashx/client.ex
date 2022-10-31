@@ -19,7 +19,7 @@ end
 defmodule Unsplashx.Client do
   use Tesla
 
-  import Unsplashx, only: [get_base_url: 0, get_client_id: 0, get_secret: 0]
+  import Unsplashx, only: [get_base_url: 0, get_client_id: 0]
 
   @decode_content_types ["application/json", "text/javascript", "text/plain"]
 
