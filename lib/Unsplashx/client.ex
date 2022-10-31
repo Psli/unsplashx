@@ -23,7 +23,7 @@ defmodule Unsplashx.Client do
 
   @decode_content_types ["application/json", "text/javascript", "text/plain"]
 
-  adapter Tesla.Adapter.Mint
+  adapter Tesla.Adapter.Hackney
 
   plug Tesla.Middleware.UnsplashxSimpleResponse
   plug Tesla.Middleware.JSON, decode_content_types: @decode_content_types
