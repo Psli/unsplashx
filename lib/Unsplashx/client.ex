@@ -48,4 +48,5 @@ defmodule Unsplashx.Client do
 
   plug(Tesla.Middleware.Headers, [{"authorization", "Client-ID #{get_client_id()}"}])
   plug(Tesla.Middleware.BaseUrl, get_base_url())
+  plug Tesla.Middleware.Timeout, timeout: 120_000
 end
