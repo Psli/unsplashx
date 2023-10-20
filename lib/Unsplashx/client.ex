@@ -41,12 +41,12 @@ defmodule Unsplashx.Client do
 
   @decode_content_types ["application/json", "text/javascript", "text/plain"]
 
-  adapter(Tesla.Adapter.Hackney)
+  adapter Tesla.Adapter.Hackney, recv_timeout: 180_000
 
   plug(Tesla.Middleware.UnsplashxSimpleResponse)
   plug(Tesla.Middleware.JSON, decode_content_types: @decode_content_types)
 
   plug(Tesla.Middleware.Headers, [{"authorization", "Client-ID #{get_client_id()}"}])
   plug(Tesla.Middleware.BaseUrl, get_base_url())
-  plug Tesla.Middleware.Timeout, timeout: 120_000
+  plug Tesla.Middleware.Timeout, timeout: 180_000
 end
